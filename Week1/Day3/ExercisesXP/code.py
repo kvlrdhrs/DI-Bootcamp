@@ -30,24 +30,16 @@ for value in values_list:
     ticket_cost += calculate_ticket_cost(value)
 print(f"total ticket cost for family: {ticket_cost}")
 
-
 # Exercise 3: Zara
-brand = {
-    'name': 'Zara',
-    'creation_date': '1975',
-    'creator_name': 'Amancio' 'Ortega' 'Gaona',
-    'type_of_clothes': ['men', 'women', 'children', 'home'],
-    'international_competitors': ['Gap', 'H&M', 'Benetton'],
-    'number_stores': '7000',
-    'major_color': {
-        'France': 'blue',
+brand = {'name': 'Zara', 'creation_date': '1975', 'creator_name': 'Amancio Ortega Gaona',
+         'type_of_clothes': ['men', 'women', 'children', 'home'],
+         'international_competitors': ['Gap', 'H&M', 'Benetton'], 'number_stores': '2', 'major_color': {
+         'France': 'blue',
         'Spain': 'red',
-        'US': 'pink' 'green',
-    }
-}
+        'US': ['pink', 'green'],
+    }}
 
 # changing the number_stores
-brand['number_stores'] = '2'
 print(brand)
 
 # describing zara's clients
@@ -64,5 +56,16 @@ for keys, values in brand.items():
         brand['international_competitors'].append('Desigual')
 
 # delete some info using pop
-brand['creation_date'].pop()
+brand.pop('creation_date')
 print(brand)
+
+# print the last international competitor
+print(brand['international_competitors'][-1])
+
+# print the major clothes in the us
+print(brand['major_color']['US'])
+
+# print len of this dictionary
+print(len(brand))
+
+#
