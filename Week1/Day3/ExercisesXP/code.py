@@ -34,7 +34,7 @@ print(f"total ticket cost for family: {ticket_cost}")
 brand = {'name': 'Zara', 'creation_date': '1975', 'creator_name': 'Amancio Ortega Gaona',
          'type_of_clothes': ['men', 'women', 'children', 'home'],
          'international_competitors': ['Gap', 'H&M', 'Benetton'], 'number_stores': '2', 'major_color': {
-         'France': 'blue',
+        'France': 'blue',
         'Spain': 'red',
         'US': ['pink', 'green'],
     }}
@@ -68,4 +68,23 @@ print(brand['major_color']['US'])
 # print len of this dictionary
 print(len(brand))
 
-#
+# print the keys of this dictionary
+for keys in brand.keys():
+    print(keys)
+
+# create new dictionary
+more_on_zara = {
+    'creation_date': '1975',
+    'number_stores': '10 000',
+}
+
+# add the info from one dictionary to another
+brand.update(more_on_zara)
+print(brand['number_stores'])
+# the key in the 'number_stores' was updated also we added new (old) key 'creation_date'
+
+
+# Exercise 4 : Disney Characters
+users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+
+disney_users_A =
