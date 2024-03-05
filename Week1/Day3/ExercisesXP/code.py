@@ -87,4 +87,22 @@ print(brand['number_stores'])
 # Exercise 4 : Disney Characters
 users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
 
-disney_users_A =
+# 1st result
+disney_users_A = {user: index for index, user in enumerate(users)}
+print(disney_users_A)
+
+# 2nd result
+disney_users_B = {index: user for index, user in enumerate(users)}
+print(disney_users_B)
+
+# 3rd result
+disney_users_C = {user: index for index, user in enumerate(sorted(users))}
+print(disney_users_C)
+
+# 4th result
+disney_users_A = {user: index for index, user in enumerate(users) if 'i' in user.lower()}
+print(disney_users_A)
+
+# 5th result
+disney_users_A = {user: index for index, user in enumerate(users) if user.lower().startswith(('m', 'p'))}
+print(disney_users_A)
