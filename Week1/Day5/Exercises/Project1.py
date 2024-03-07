@@ -3,6 +3,9 @@ board = [
     ['col', 'col', 'col']
     ['col', 'col', 'col']
 ]
+print(board)
+
+
 
 def display_board():
     pass
