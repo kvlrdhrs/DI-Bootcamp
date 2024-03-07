@@ -18,3 +18,6 @@ def check_win():
 
 def play():
     pass
+
+def kkkk():
+    pass
