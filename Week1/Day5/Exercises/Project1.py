@@ -1,10 +1,4 @@
-board = [
-    ['col', 'col', 'col']
-    ['col', 'col', 'col']
-    ['col', 'col', 'col']
-]
-print(board)
-
+# Mini-Project - Tic Tac Toe
 
 
 def display_board():
@@ -24,3 +18,6 @@ def play():
 
 def kkkk():
     pass
+
+
+
