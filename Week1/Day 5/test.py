@@ -7,4 +7,8 @@ print(my_tuple)
 print(my_tuple[2])
 
 
-country, capital, bigest_city = ()
+my_tuple2 = (10, 20, 30, 40, 50)
+my_tuple3 = my_tuple + my_tuple2
+print(my_tuple3)
+
+print(max(my_tuple3))
