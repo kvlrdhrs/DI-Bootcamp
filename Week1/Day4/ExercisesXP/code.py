@@ -109,7 +109,7 @@ def quiz_question():
         user_answer = input("")
         if user_answer != answer:
             print("Sorry")
-
+quiz_question()
 
 
 
