@@ -9,3 +9,9 @@ print(x)
 board1 = np.full([3,3], "   ", dtype=str)
 print(board1)
 print(board1[1][1])
+
+
+
+board2 = np.full([3,3], "   ", dtype=str)
+print(board1)
+print(board1[1][1])
