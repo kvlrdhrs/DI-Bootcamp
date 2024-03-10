@@ -109,7 +109,7 @@ class Zoo():
         for letter, animals in self.sort_animals().items():
             print(f"Group {letter}: {', '.join(animals)}")
 
-    # Example usage:
+# Example usage:
 ramat_gan_safari = Zoo("Ramat Gan Safari")
 ramat_gan_safari.add_animal('Tiger', 'Ape', 'Baboon', 'Bear', 'Cat', 'Cougar', 'Eul', 'Emu')
 ramat_gan_safari.sell_animal('Tiger')
