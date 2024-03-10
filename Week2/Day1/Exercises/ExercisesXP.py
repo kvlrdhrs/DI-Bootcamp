@@ -105,28 +105,13 @@ class Zoo():
 
         return grouped_animals
 
+    def get_groups(self):
+        for letter, animals in self.sort_animals().items():
+            print(f"Group {letter}: {', '.join(animals)}")
 
-
-my_zoo = Zoo("Zoo_Test")
-my_zoo.add_animal('Tiger', 'Ape', 'Baboon', 'Bear', 'Cat', 'Cougar', 'Eul', 'Emu')
-my_zoo.sell_animal("Tiger")
-
-
-my_zoo.get_animal()
-
-sorted_and_grouped_animals = my_zoo.sort_animals()
-print(sorted_and_grouped_animals)
-
-
-    def get_groups(animals):
-        pass
-
-
-ramat_gan_safari = ''
-
-
-
-
-
-
-
+    # Example usage:
+ramat_gan_safari = Zoo("Ramat Gan Safari")
+ramat_gan_safari.add_animal('Tiger', 'Ape', 'Baboon', 'Bear', 'Cat', 'Cougar', 'Eul', 'Emu')
+ramat_gan_safari.sell_animal('Tiger')
+ramat_gan_safari.get_animal()
+ramat_gan_safari.get_groups()
