@@ -71,7 +71,7 @@ num_of_lives = 6
 end_of_game = False
 
 while not end_of_game:
-    choice_of_letter = (input("Please enter a letter: ")).lower()
+    choice_of_letter = (input("Enter a letter: ")).lower()
     for position in range(len(word)):
         letter = word[position]
         if letter == choice_of_letter:
@@ -80,9 +80,9 @@ while not end_of_game:
         num_of_lives -= 1
         if num_of_lives == 0:
             end_of_game = True
-            print("You lost")
+            print('You lost')
     print(''.join(shown_word))
     print(hangman_pictures[num_of_lives])
     if "*" not in shown_word:
         end_of_game = True
-        print("You win.")
+        print('You win')
