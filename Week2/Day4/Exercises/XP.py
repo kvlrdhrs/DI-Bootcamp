@@ -52,16 +52,16 @@ sampleJson = """{
    }
 }"""
 
-# # Load JSON string into a Python dictionary
-# data = json.loads(sampleJson)
-#
-# # Access the nested "salary" key
-# print(data["company"]["employee"]["payable"]["salary"])
-# # Add a new key "birth_date" at the same level as the "name" key
-# data["company"]["employee"]["birth_date"] = "1995-08-23"  # You can replace this date with the actual birth date
-#
-# # Save the modified dictionary as JSON to a file
-# with open("modified_data.json", "w") as json_file:
-#     json.dump(data, json_file, indent=2)
-#
-# print("JSON saved to 'modified_data.json'")
+# Load JSON string into a Python dictionary
+data = json.loads(sampleJson)
+
+# Access the nested "salary" key
+print(data["company"]["employee"]["payable"]["salary"])
+# Add a new key "birth_date" at the same level as the "name" key
+data["company"]["employee"]["birth_date"] = "1995-08-23"  # You can replace this date with the actual birth date
+
+# Save the modified dictionary as JSON to a file
+with open("modified_data.json", "w") as json_file:
+    json.dump(data, json_file, indent=2)
+
+print("JSON saved to 'modified_data.json'")
