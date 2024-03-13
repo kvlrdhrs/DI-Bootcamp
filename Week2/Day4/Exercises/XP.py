@@ -16,9 +16,6 @@ def get_random_sentence(words, length):
 
 
 def main():
-    print("Welcome to the Random Sentence Generator!")
-    print("This program will generate a random sentence for you.")
-
     # Ask the user for input and validate it
     while True:
         try:
