@@ -42,5 +42,21 @@
 
 -- select * from items
 
-select * from items
-where item_price > 80
+-- select * from items
+-- where item_price > 80
+
+-- select * from items
+-- where item_price <= 300
+
+-- alter table customers rename column cust_surname to cust_lastname
+
+-- select * from customers
+-- where cust_lastname = 'Smith'
+
+-- select * from customers
+-- where cust_lastname = 'Jones'
+
+-- select * from customers
+-- where cust_name not in ('Scott')
+
+
