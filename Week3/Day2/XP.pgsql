@@ -18,3 +18,28 @@
 
 -- Exercise 2 : Dvdrental Database
 
+-- select * from customer
+
+-- select (first_name, last_name) as full_name from customer
+
+-- select distinct create_date from customer
+
+-- select * from customer
+-- order by first_name desc
+
+-- select film_id, title, description, release_year, rental_rate from film
+-- order by rental_rate asc
+
+-- select address, phone from address
+-- where district = 'Texas'
+
+-- select * from film
+-- where film_id in (15, 150)
+
+-- select film_id, title, description, length, rental_rate from film
+-- where title ilike 'Dune'
+
+-- select film_id, title, description, length, rental_rate from film
+-- WHERE left (title, 2) = 'Du' (WHERE title ilike 'Du%')
+
+select * from film
