@@ -20,3 +20,11 @@
 
 -- SELECT * from firsttab
 -- select * from secondtab
+
+-- questions
+-- Q1. What will be the OUTPUT of the following statement?
+
+SELECT COUNT(*) 
+FROM FirstTab AS
+
+-- answer: 3
