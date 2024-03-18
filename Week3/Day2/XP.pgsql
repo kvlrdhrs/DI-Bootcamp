@@ -44,7 +44,7 @@
 
 -- select title as film_name, rental_rate as film_cost from film
 -- order by rental_rate asc
--- fetch first 20 rows only
+-- fetch first 10 rows only
 
 -- select title as film_name, rental_rate as film_cost from film
 -- order by rental_rate asc
