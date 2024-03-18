@@ -42,4 +42,23 @@
 -- select film_id, title, description, length, rental_rate from film
 -- WHERE left (title, 2) = 'Du' (WHERE title ilike 'Du%')
 
-select * from film
+-- select title as film_name, rental_rate as film_cost from film
+-- order by rental_rate asc
+-- fetch first 20 rows only
+
+
+
+
+-- select customer.first_name, customer.last_name, payment.amount, payment.payment_date
+-- from customer
+-- inner join payment on customer.customer_id=payment.customer_id
+-- order by customer.customer_id
+
+-- select film.title, inventory.film_id
+-- from film
+-- left join inventory on film.film_id=inventory.film_id
+-- where inventory.film_id is null
+
+-- select city.city, country.country
+-- from city
+-- inner join country on city.country_id=country.country_id
