@@ -46,8 +46,10 @@
 -- order by rental_rate asc
 -- fetch first 20 rows only
 
-
-
+-- select title as film_name, rental_rate as film_cost from film
+-- order by rental_rate asc
+-- offset 10 rows
+-- fetch next 10 rows only
 
 -- select customer.first_name, customer.last_name, payment.amount, payment.payment_date
 -- from customer
