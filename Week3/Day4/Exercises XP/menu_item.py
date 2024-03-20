@@ -26,18 +26,16 @@ class MenuItem():
         cur.execute("""DELETE FROM menu_items WHERE item_name = %s and item_price = %s""", (self.name, self.price))
 
 
-    def update(self, id):
-        cur.execute("""UPDATE menu_items SET item_name = %s, item_price = %s WHERE item_id = %s""", (self.name, self.price, id))
+    def update(self, new_name, new_price):
+        cur.execute("""UPDATE menu_items SET item_name = %s, item_price = %s where item_name = %s""", (new_name, new_price, self.name))
+        self.name = new_name
+        self.price = new_price
 
-
-# item = Menu_Item('Burger', 35)
 
 # item = MenuItem('Burger', 35)
 # item.save()
-# item2= MenuItem('her', 10)
-# item2.delete()
-item3 = MenuItem('kkk', 1)
-item3.update(2)
+# item.delete()
+# item.update('Veggie Burger', 37)
 
 cur.close()
 conn.close()
