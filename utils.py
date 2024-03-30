@@ -1,29 +1,20 @@
-import subprocess
-import platform
+def download_and_read_csv(dataset_link):
+    """
+    Downloads a dataset from Kaggle using the provided dataset link and creates a DataFrame from the downloaded CSV file.
 
-def unzip_with_7z(zip_file_path, dest_path, password):
-    os_type = platform.system()
-    
-    if isinstance(password, bytes):
-        password = password.decode('utf-8')
-    
-    cmd_output = ""
-    
-    if os_type == 'Darwin':  # macOS
-        result = subprocess.run(['7za', 'x', '-p' + password, '-o' + dest_path, zip_file_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        cmd_output = result.stdout + result.stderr
-    elif os_type == 'Windows':  # Windows
-        result = subprocess.run(['7z', 'x', '-p' + password, '-o' + dest_path, zip_file_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        cmd_output = result.stdout + result.stderr
-    elif os_type == 'Linux':  # Linux
-        result = subprocess.run(['7z', 'x', '-p' + password, '-o' + dest_path, zip_file_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        cmd_output = result.stdout + result.stderr
-    else:
-        print(f"Unsupported OS type: {os_type}")
-        return False
+    Args:
+    - dataset_link (str): The Kaggle dataset link.
 
-    if "Everything is Ok" in cmd_output:
-        print(f"Successfully extracted all files to {dest_path} with password {password}")
-        return True
-    else:
-        return False
+    Returns:
+    - df (DataFrame): The DataFrame created from the downloaded CSV file.
+    """
+    api = KaggleApi()
+    api.authenticate()
+    api.dataset_download_files(dataset_link, path=".", unzip=True)
+    files = os.listdir()
+
+    for file in files:
+        if file.endswith('.csv'):
+            print(f"Found CSV file: {file}")
+            df = pd.read_csv(file)
+            return df
