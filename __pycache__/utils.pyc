@@ -1,3 +1,12 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import zipfile
+from kaggle.api.kaggle_api_extended import KaggleApi
+pd.set_option('display.float_format', '{:.2f}'.format)
+
 def download_and_read_csv(dataset_link):
     """
     Downloads a dataset from Kaggle using the provided dataset link and creates a DataFrame from the downloaded CSV file.
