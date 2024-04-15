@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Enhanced HTML Page</title>
+</head>
+<body>
+    <h1 id="dynamicHeading">Welcome to My Website</h1>
+    <p>This is a JavaScript-enhanced HTML page.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // JavaScript code to modify the heading dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            var dynamicHeading = document.getElementById('dynamicHeading');
+            dynamicHeading.textContent = "Welcome to the Dynamic Website";
+        });
+    </script>
+</body>
+</html>
