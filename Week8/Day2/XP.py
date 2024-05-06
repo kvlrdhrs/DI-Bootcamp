@@ -100,14 +100,13 @@ cleaned_dataset = create_cleaned_dataset(data, preprocessed_text)
 # print("Cleaned Dataset:")
 # print(cleaned_dataset)
 
-# Perform NER/POS on a sample review
-sample_review = cleaned_dataset['Cleaned_Review'][0]
-entities = perform_ner(sample_review)
-entities2 = perform_pos_tagging(sample_review)
+# Perform NER on all sample reviews
+for idx, review in enumerate(cleaned_dataset['Cleaned_Review']):
+    print(f"\nEntities and Labels for Review {idx + 1}:")
+    entities = perform_ner(review)
+    for entity in entities:
+        print(entity)
 
-
-# for entity in entities:
-#     print(entity)
-
+# entities2 = perform_pos_tagging(sample_review)
 # for word, tag in entities2:
 #     print(f'Word: {word}, POS: {tag}')
